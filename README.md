@@ -1,21 +1,21 @@
-## 1. ระบบ URL Shortener
+## 1. URL Shortener
 
 * database
-Firebase - Clound Firestore
-    * ใช้วิธีนับ atomic counter แล้ว hash id เพื่อสร้าง short url ให้กับ long url
+	* Firebase - Clound Firestore
+    * I use atomic counter for create hash id to short url
 
 * back-end
-Firebase - Cloud Functions + Node Express Build Routes and API
+	* Firebase - Cloud Functions + Node Express Build Routes and API
     * **/:encodedid** - GET: Redirects to the Long URL
 	* **/api/shorten** - POST: Returns Short URL
 
 * front-end
-Single HTML PAGE
+	* Single HTML PAGE + Bootstrap
 
 * deployment
-Firebase CLI
+	* Firebase CLI
 
-* local test
+* local test -- google cloud function they need upgrade billing plan to use it, so I run local.
 ```
 const config = {
     webhost: 'http://localhost:5001/url-shortener-3d8fa/us-central1/shortener/'
